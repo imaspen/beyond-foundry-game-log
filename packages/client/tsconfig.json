@@ -1,0 +1,17 @@
+{
+  "include": ["src/**/*.ts"],
+  "compilerOptions": {
+    "lib": ["DOM", "ESNext"],
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "strict": true,
+    "types": ["jquery", "@league-of-foundry-developers/foundry-vtt-types"],
+    "rootDir": "./src",
+    "noEmit": true,
+    "skipLibCheck": true
+  }
+}

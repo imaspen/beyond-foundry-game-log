@@ -1,0 +1,21 @@
+{
+	"id": "beyond-foundry-game-log",
+	"title": "Beyond Foundry Game Log",
+	"description": "Synchronize DnD Beyond's game log with Foundry.",
+	"system": [
+		"dnd5e"
+	],
+	"esmodules": [
+		"scripts/index.js"
+	],
+	"compatibility": {
+		"minimum": "12",
+		"verified": "12"
+	},
+	"url": "https://github.com/imaspen/beyond-foundry-game-log",
+	"manifest": "https://github.com/imaspen/beyond-foundry-game-log/releases/latest/download/module.json",
+	"license": "https://github.com/imaspen/beyond-foundry-game-log/blob/main/packages/client/LICENSE",
+	"readme": "https://github.com/imaspen/beyond-foundry-game-log/blob/main/packages/client/README.md",
+	"bugs": "https://github.com/imaspen/beyond-foundry-game-log/issues",
+	"changelog": "https://github.com/imaspen/beyond-foundry-game-log/releases"
+}

@@ -1,0 +1,39 @@
+name: Publish client
+
+on:
+  push:
+    tags:
+      - client/v[0-9]+.[0-9]+.[0-9]+
+
+run-name: Publish ${{github.ref_name}}
+
+jobs:
+  publish-client:
+    name: Publish client
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - name: Build packages
+        run: pnpm i --frozen-lockfile
+
+      - name: Collect release assets
+        run: |
+          mkdir release_assets
+          cp packages/client/dist/module.json release_assets/module.json
+          (cd packages/client/dist && zip - -r *) > release_assets/module.zip
+
+      - name: Create release
+        run: gh release create $tag ./release_assets/*
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{github.ref_name}}

@@ -1,0 +1,15 @@
+{
+  "name": "@beyond-foundry-game-log/workspace",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Workspace root",
+  "author": {
+    "name": "Aspen Thompson",
+    "email": "hi@imaspen.dev",
+    "url": "https://www.imaspen.dev"
+  },
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@9.5.0",
+  "prettier": {}
+}

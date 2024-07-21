@@ -1,0 +1,30 @@
+{
+  "name": "@beyond-foundry-game-log/client",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Foundry client module",
+  "author": {
+    "name": "Aspen Thompson",
+    "email": "hi@imaspen.dev",
+    "url": "https://www.imaspen.dev"
+  },
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "prepare": "vite build",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^8.57.0",
+    "@league-of-foundry-developers/foundry-vtt-types": "github:League-of-Foundry-Developers/foundry-vtt-types#v12/main",
+    "@types/eslint__js": "^8.42.3",
+    "@types/jquery": "^3.5.30",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^7.16.1",
+    "vite": "^5.3.4"
+  },
+  "prettier": {}
+}

@@ -1,0 +1,26 @@
+<form class="flexcol">
+  <section>
+    <table>
+      <thead>
+        <tr>
+          <td style="min-width: 20ch;">Foundry Actor</td>
+          <td style="min-width: 20ch;">D&amp;D Beyond ID</td>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each actors}}
+        <tr>
+          <td><label for="{{this.id}}">{{this.actor.name}}</label></td>
+          <td><input type="text" name="{{this.id}}" value="{{this.mapping}}"></td>
+        </tr>
+        {{/each}}
+        </td>
+    </table>
+  </section>
+  <footer class="sheet-footer flexrow">
+    <button type="submit" name="submit">
+      <i class="fa fa-save"></i>
+      Save
+    </button>
+  </footer>
+</form>

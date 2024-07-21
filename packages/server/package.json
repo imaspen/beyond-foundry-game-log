@@ -1,0 +1,52 @@
+{
+  "name": "@beyond-foundry-game-log/server",
+  "version": "1.0.2",
+  "description": "Proxy server that communicates with DnD Beyond",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imaspen/beyond-foundry-game-log",
+    "directory": "packages/server"
+  },
+  "author": {
+    "name": "Aspen Thompson",
+    "email": "hi@imaspen.dev",
+    "url": "https://www.imaspen.dev"
+  },
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist/*.js",
+    "dist/index.d.ts"
+  ],
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "default": "./dist/index.js"
+  },
+  "bin": {
+    "beyond-foundry-server": "dist/start.js"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "prepare": "tsc -b",
+    "dev": "tsx src/start.ts"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^8.57.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^20.14.11",
+    "@types/ws": "^8.5.11",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^7.16.1"
+  },
+  "prettier": {}
+}
