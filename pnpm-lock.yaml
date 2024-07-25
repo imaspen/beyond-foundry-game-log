@@ -46,9 +46,6 @@ importers:
       node-fetch:
         specifier: ^3.3.2
         version: 3.3.2
-      ws:
-        specifier: ^8.18.0
-        version: 8.18.0
     devDependencies:
       '@eslint/js':
         specifier: ^8.57.0
@@ -59,9 +56,6 @@ importers:
       '@types/node':
         specifier: ^20.14.11
         version: 20.14.11
-      '@types/ws':
-        specifier: ^8.5.11
-        version: 8.5.11
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -600,9 +594,6 @@ packages:
 
   '@types/sizzle@2.3.8':
     resolution: {integrity: sha512-0vWLNK2D5MT9dg0iOo8GlKguPAU02QjmZitPEsXRuJXU/OGIOt9vT9Fc26wtYuavLxtO45v9PGleoL9Z0k1LHg==}
-
-  '@types/ws@8.5.11':
-    resolution: {integrity: sha512-4+q7P5h3SpJxaBft0Dzpbr6lmMaqh0Jr2tbhJZ/luAwvD7ohSCniYkwz/pLxuT2h0EOa6QADgJj1Ko+TzRfZ+w==}
 
   '@types/youtube@0.0.50':
     resolution: {integrity: sha512-d4GpH4uPYp9W07kc487tiq6V/EUHl18vZWFMbQoe4Sk9LXEWzFi/BMf9x7TI4m7/j7gU3KeX8H6M8aPBgykeLw==}
@@ -1446,18 +1437,6 @@ packages:
       utf-8-validate:
         optional: true
 
-  ws@8.18.0:
-    resolution: {integrity: sha512-8VbfWfHLbbwu3+N6OKsOMpBdT4kXPDDB9cJk2bJ6mh9ucxdlnNvH1e+roYkKmN9Nxw2yjz7VzeO9oOz2zJ04Pw==}
-    engines: {node: '>=10.0.0'}
-    peerDependencies:
-      bufferutil: ^4.0.1
-      utf-8-validate: '>=5.0.2'
-    peerDependenciesMeta:
-      bufferutil:
-        optional: true
-      utf-8-validate:
-        optional: true
-
   xmlhttprequest-ssl@2.0.0:
     resolution: {integrity: sha512-QKxVRxiRACQcVuQEYFsI1hhkrMlrXHPegbbd1yn9UHOmRxY+si12nQYzri3vbzt8VdTTRviqcKxcyllFas5z2A==}
     engines: {node: '>=0.4.0'}
@@ -1918,10 +1897,6 @@ snapshots:
       '@types/node': 20.14.11
 
   '@types/sizzle@2.3.8': {}
-
-  '@types/ws@8.5.11':
-    dependencies:
-      '@types/node': 20.14.11
 
   '@types/youtube@0.0.50': {}
 
@@ -2858,8 +2833,6 @@ snapshots:
   wrappy@1.0.2: {}
 
   ws@8.17.1: {}
-
-  ws@8.18.0: {}
 
   xmlhttprequest-ssl@2.0.0: {}
 
