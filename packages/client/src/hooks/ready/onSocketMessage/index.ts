@@ -3,6 +3,7 @@ import { isActorMappings } from "@/types/ActorMapping";
 import { isBeyondMessage } from "@/types/BeyondMessage";
 import { getFormula } from "./getFormula";
 import { getTerms } from "./getTerms";
+import { maybeUpdateInitiative } from "./maybeUpdateInitiative";
 
 function parseAction(action: string): string {
   switch (action) {
@@ -23,7 +24,7 @@ function parseAction(action: string): string {
   }
 }
 
-export function onSocketMessage(event: MessageEvent<unknown>) {
+export async function onSocketMessage(event: MessageEvent<unknown>) {
   if (typeof event.data !== "string") return;
   if (event.data === "pong") return;
 
@@ -39,9 +40,11 @@ export function onSocketMessage(event: MessageEvent<unknown>) {
 
     const setting = game.settings?.get(MODULE_ID, "actorMappings");
     const mappings = isActorMappings(setting) ? setting.mappings : [];
-    const actor = mappings.find(
+    const actorId = mappings.find(
       ({ beyondId }) => beyondId === message.data.context.entityId,
     )?.actorId;
+
+    await maybeUpdateInitiative(message, actorId);
 
     void Roll.fromData({
       formula,
@@ -49,7 +52,7 @@ export function onSocketMessage(event: MessageEvent<unknown>) {
       total: result.total,
       terms,
     }).toMessage({
-      speaker: { actor },
+      speaker: { actor: actorId },
       flavor: `${parseAction(message.data.action)} ${rollType}`,
     });
   } catch (e) {
